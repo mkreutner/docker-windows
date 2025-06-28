@@ -1,0 +1,8 @@
+# project tree
+data/*
+!data/.gitkeep
+iso/*
+!iso/.gitkeep
+
+# environment variable
+.env

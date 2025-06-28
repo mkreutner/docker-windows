@@ -1,0 +1,20 @@
+services:
+  windows-10:
+    build:
+      context: .
+      args:
+        - IMAGE=${IMAGE}
+        - TAG=${TAG}
+    container_name: windows-10
+    hostname: windows-10
+    ports:
+      - 6080:6080
+      - 3389:3389
+    restart: no
+    tty: true
+    stdin_open: true
+    volumes:
+      - ./data:/data
+      - ./iso/${WINDOWS_10_ISO}:/iso/os.iso
+
+    
