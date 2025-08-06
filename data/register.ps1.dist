@@ -1,0 +1,4 @@
+slmgr.vbs /ipk XXXXX-XXXXX-XXXXX-XXXXX-XXXXX
+slmgr.vbs /skms kms.server.name
+slmgr.vbs /ato
+slmgr.vbs /dlv

@@ -1,0 +1,9 @@
+/data/*
+!/data/.gitkeep
+!/data/*.dist
+/iso/*
+!/iso/.gitkeep
+/storage/*
+!/storage/.gitkeep
+
+.env

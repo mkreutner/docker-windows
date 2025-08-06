@@ -1,0 +1,28 @@
+services:
+  ms-sql-2019:
+    image: dockurr/windows
+    container_name: ms-sql-2019
+    hostname: ms-sql-2019
+    environment:
+      - REGION="en-US"
+      - KEYBOARD="en-US"
+      - RAM_SIZE=8G
+      - CPU_CORES=4
+    devices:
+      - /dev/kvm
+      - /dev/net/tun
+    cap_add:
+      - NET_ADMIN
+    ports:
+      - 8006:8006
+      - 3389:3389/tcp
+      - 3389:3389/udp
+      - 1433:1433/tcp
+      - 1433:1433/udp
+    volumes:
+      #- ./iso/windows.11_24h4_en_int.x64.iso:/boot.iso
+      - ./iso/windows.srv_2019_en_int.x64.iso:/boot.iso
+      - ./storage:/storage
+      - ./data:/data
+    restart: no
+    stop_grace_period: 2m
